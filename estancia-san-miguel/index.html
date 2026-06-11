@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estancia San Miguel - Espacio exclusivo para eventos sociales y corporativos en Ecuador. Jardines, elegancia y momentos inolvidables. Reserva hoy." />
+  <meta name="keywords" content="Estancia San Miguel, salón de eventos, alquiler de salón, eventos corporativos, hacienda eventos, quinceañeras, jardín de eventos, eventos sociales Ecuador" />
+  <meta name="author" content="Estancia San Miguel" />
+  <meta property="og:title" content="Estancia San Miguel | Espacio para Eventos Exclusivos" />
+  <meta property="og:description" content="Naturaleza, calidez y momentos inolvidables. Reserva tu evento en Estancia San Miguel." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#4D5D46" />
+  <title>Estancia San Miguel | Eventos Exclusivos en Ecuador</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo" aria-label="Estancia San Miguel - Inicio">
+        <img src="images/logo.jpg" alt="Logo Estancia San Miguel" class="nav-logo-img" loading="eager" />
+      </a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#eventos" class="nav-link">Eventos</a></li>
+        <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+        <li><a href="#galeria" class="nav-link">Galería</a></li>
+        <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+        <li>
+          <a href="https://wa.me/593990712984?text=Hola%2C%20deseo%20informaci%C3%B3n%20para%20reservar%20un%20evento%20en%20Estancia%20San%20Miguel."
+             target="_blank" rel="noopener noreferrer" class="nav-cta" id="nav-reservar-btn">
+            Reservar
+          </a>
+        </li>
+      </ul>
+      <button class="nav-burger" id="nav-burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio" aria-label="Sección principal">
+    <div class="hero-bg-wrapper">
+      <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content" id="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Espacio Exclusivo para Eventos
+      </div>
+      <h1 class="hero-title" id="hero-title">Estancia<br /><em>San Miguel</em></h1>
+      <p class="hero-subtitle" id="hero-subtitle">Naturaleza, calidez y momentos inolvidables</p>
+      <div class="hero-divider"></div>
+      <div class="hero-cta-group" id="hero-cta">
+        <a href="https://wa.me/593990712984?text=Hola%2C%20deseo%20informaci%C3%B3n%20para%20reservar%20un%20evento%20en%20Estancia%20San%20Miguel."
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-primary" id="hero-btn-reservar">
+          <span>Reservar Evento</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/593990712984?text=Hola%2C%20deseo%20informaci%C3%B3n%20para%20reservar%20un%20evento%20en%20Estancia%20San%20Miguel."
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline" id="hero-btn-visita">
+          <span>Agendar Visita</span>
+        </a>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Descubre más</span>
+      </div>
+    </div>
+    <div class="hero-slides-nav" aria-hidden="true">
+      <span class="slide-dot active" data-slide="0"></span>
+      <span class="slide-dot" data-slide="1"></span>
+      <span class="slide-dot" data-slide="2"></span>
+      <span class="slide-dot" data-slide="3"></span>
+      <span class="slide-dot" data-slide="4"></span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section-padding" id="nosotros" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="about-img-parallax" id="about-parallax">
+            <img src="images/evento-noche.jpg"
+                 alt="Cena íntima en el salón rústico de Estancia San Miguel con letrero iluminado y chimenea"
+                 class="about-img" loading="lazy" />
+          </div>
+          <div class="about-img-accent" aria-hidden="true"></div>
+          <div class="about-img-badge">
+            <span class="badge-number">+10</span>
+            <span class="badge-text">Años de Experiencia</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-tag">Sobre Nosotros</div>
+          <h2 class="section-title" id="about-title">Un lugar creado<br />para <em>celebrar</em></h2>
+          <div class="gold-divider"></div>
+          <p class="about-text">
+            Estancia San Miguel es un espacio rodeado de naturaleza diseñado para crear experiencias memorables.
+            Nuestro entorno combina elegancia, jardines, comodidad y atención personalizada para convertir cada
+            celebración en un momento único.
+          </p>
+          <p class="about-text">
+            Desde reuniones familiares íntimas hasta grandes eventos corporativos, nuestro equipo se dedica
+            a hacer que cada detalle sea perfecto, cuidando cada aspecto para que tú solo te preocupes de disfrutar.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="feature-icon-sm">🌿</div>
+              <div>
+                <strong>Jardines Naturales</strong>
+                <p>Rodeados de vegetación exuberante</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon-sm">⭐</div>
+              <div>
+                <strong>Atención Premium</strong>
+                <p>Servicio personalizado en cada detalle</p>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/593990712984?text=Hola%2C%20deseo%20informaci%C3%B3n%20para%20reservar%20un%20evento%20en%20Estancia%20San%20Miguel."
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary-olive" id="about-cta-btn">
+            <span>Contáctanos</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS ===== -->
+  <section class="events section-padding bg-dark" id="eventos" aria-labelledby="events-title">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag light">Nuestros Eventos</div>
+        <h2 class="section-title light" id="events-title">Cada Momento Merece<br /><em>lo Mejor</em></h2>
+        <div class="gold-divider center"></div>
+        <p class="section-desc light">Creamos experiencias a medida para cada tipo de celebración</p>
+      </div>
+      <div class="events-grid" id="events-grid">
+
+        <article class="event-card" id="card-familiar" tabindex="0">
+          <div class="event-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="32" cy="20" r="8"/>
+              <path d="M16 52c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
+              <circle cx="14" cy="26" r="6"/>
+              <path d="M2 52c0-6.627 5.373-12 12-12"/>
+              <circle cx="50" cy="26" r="6"/>
+              <path d="M62 52c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </div>
+          <h3 class="event-card-title">Reuniones Familiares</h3>
+          <p class="event-card-desc">El escenario perfecto para reunir a toda la familia en un ambiente cálido y acogedor.</p>
+          <div class="event-card-line"></div>
+        </article>
+
+        <article class="event-card" id="card-cumpleanos" tabindex="0">
+          <div class="event-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 32h48v24H8z"/>
+              <path d="M16 32v-4c0-8.837 7.163-16 16-16s16 7.163 16 16v4"/>
+              <circle cx="32" cy="14" r="4"/>
+              <line x1="32" y1="10" x2="32" y2="4"/>
+              <path d="M20 44h24M20 52h16"/>
+            </svg>
+          </div>
+          <h3 class="event-card-title">Cumpleaños</h3>
+          <p class="event-card-desc">Celebra tu día especial con una fiesta memorable rodeada de naturaleza y elegancia.</p>
+          <div class="event-card-line"></div>
+        </article>
+
+        <article class="event-card" id="card-bautizos" tabindex="0">
+          <div class="event-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M32 8c-8 0-14 6-14 14 0 10 14 24 14 24s14-14 14-24c0-8-6-14-14-14z"/>
+              <circle cx="32" cy="22" r="4"/>
+              <path d="M20 48c0 4.418 5.373 8 12 8s12-3.582 12-8"/>
+            </svg>
+          </div>
+          <h3 class="event-card-title">Bautizos</h3>
+          <p class="event-card-desc">Un espacio sagrado y elegante para celebrar los primeros momentos de vida.</p>
+          <div class="event-card-line"></div>
+        </article>
+
+        <article class="event-card" id="card-graduaciones" tabindex="0">
+          <div class="event-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M32 12L4 28l28 16 28-16z"/>
+              <path d="M16 36v12c5 4 26 4 32 0V36"/>
+              <line x1="56" y1="28" x2="56" y2="44"/>
+            </svg>
+          </div>
+          <h3 class="event-card-title">Graduaciones</h3>
+          <p class="event-card-desc">Honra el logro más importante con una celebración digna del esfuerzo realizado.</p>
+          <div class="event-card-line"></div>
+        </article>
+
+        <article class="event-card" id="card-corporativo" tabindex="0">
+          <div class="event-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="8" y="16" width="48" height="36" rx="2"/>
+              <path d="M22 16v-4h20v4"/>
+              <line x1="8" y1="30" x2="56" y2="30"/>
+              <circle cx="32" cy="42" r="6"/>
+              <path d="M24 42h16"/>
+            </svg>
+          </div>
+          <h3 class="event-card-title">Eventos Corporativos</h3>
+          <p class="event-card-desc">Reuniones, conferencias y lanzamientos en un entorno que inspira creatividad.</p>
+          <div class="event-card-line"></div>
+        </article>
+
+        <article class="event-card" id="card-especial" tabindex="0">
+          <div class="event-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="32,6 38,24 58,24 42,36 48,54 32,42 16,54 22,36 6,24 26,24"/>
+            </svg>
+          </div>
+          <h3 class="event-card-title">Celebraciones Especiales</h3>
+          <p class="event-card-desc">Cada ocasión única merece un espacio extraordinario que la haga brillar.</p>
+          <div class="event-card-line"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="benefits section-padding" id="beneficios" aria-labelledby="benefits-title">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">¿Por qué elegirnos?</div>
+        <h2 class="section-title" id="benefits-title">Todo lo que Necesitas<br />en un <em>Solo Lugar</em></h2>
+        <div class="gold-divider center"></div>
+      </div>
+      <div class="benefits-grid" id="benefits-grid">
+        <div class="benefit-item" id="benefit-1">
+          <div class="benefit-icon">🌿</div>
+          <h3 class="benefit-title">Áreas Verdes y Jardines</h3>
+          <p class="benefit-desc">Amplios jardines naturales que crean el ambiente perfecto para cualquier celebración al aire libre.</p>
+        </div>
+        <div class="benefit-item" id="benefit-2">
+          <div class="benefit-icon">🍽</div>
+          <h3 class="benefit-title">Servicio de Catering</h3>
+          <p class="benefit-desc">Gastronomía de alta calidad con menús personalizados para deleitar a todos tus invitados.</p>
+        </div>
+        <div class="benefit-item" id="benefit-3">
+          <div class="benefit-icon">🚗</div>
+          <h3 class="benefit-title">Amplio Estacionamiento</h3>
+          <p class="benefit-desc">Estacionamiento seguro y espacioso para que tus invitados lleguen con total comodidad.</p>
+        </div>
+        <div class="benefit-item" id="benefit-4">
+          <div class="benefit-icon">🎵</div>
+          <h3 class="benefit-title">Ambiente Personalizado</h3>
+          <p class="benefit-desc">Adaptamos cada espacio a tu visión con decoración, iluminación y música a medida.</p>
+        </div>
+        <div class="benefit-item" id="benefit-5">
+          <div class="benefit-icon">⭐</div>
+          <h3 class="benefit-title">Atención Personalizada</h3>
+          <p class="benefit-desc">Un equipo dedicado exclusivamente a hacer que tu evento sea perfecto en cada detalle.</p>
+        </div>
+        <div class="benefit-item" id="benefit-6">
+          <div class="benefit-icon">🏡</div>
+          <h3 class="benefit-title">Espacios Versátiles</h3>
+          <p class="benefit-desc">Salones interiores y jardines exteriores que se adaptan al tamaño y estilo de tu evento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery section-padding bg-light" id="galeria" aria-labelledby="gallery-title">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Galería</div>
+        <h2 class="section-title" id="gallery-title">Momentos que<br /><em>Hablan por Sí Solos</em></h2>
+        <div class="gold-divider center"></div>
+        <p class="section-desc">Cada fotografía es una historia de alegría, amor y celebración</p>
+      </div>
+
+      <div class="gallery-masonry" id="gallery-grid" role="list">
+
+        <!-- FILA 1: Jardín noche elegante (grande) + Cena íntima (alta) -->
+        <div class="gallery-item gallery-large" role="listitem">
+          <div class="gallery-img-wrap">
+            <img src="images/jardin-noche-elegante.jpg"
+                 alt="Jardín de Estancia San Miguel decorado con carpa blanca, cortinas y luces de hada para una recepción nocturna elegante"
+                 loading="eager" class="gallery-img" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
+                      data-src="images/jardin-noche-elegante.jpg"
+                      data-alt="Jardín nocturno elegante">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-tall" role="listitem">
+          <div class="gallery-img-wrap">
+            <img src="images/evento-noche.jpg"
+                 alt="Cena íntima en el salón rústico de Estancia San Miguel con letrero iluminado, chimenea de ladrillo y ambiente cálido"
+                 loading="eager" class="gallery-img" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
+                      data-src="images/evento-noche.jpg"
+                      data-alt="Cena íntima rústica">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILA 2: Salón recepción (wide) -->
+        <div class="gallery-item gallery-wide" role="listitem">
+          <div class="gallery-img-wrap">
+            <img src="images/evento-salon.jpg"
+                 alt="Gran salón de Estancia San Miguel con invitados en recepción, vigas de madera, ventanales y música en vivo"
+                 loading="lazy" class="gallery-img" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
+                      data-src="images/evento-salon.jpg"
+                      data-alt="Gran salón recepción">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILA 2 col 3: Jardín carpa blanca -->
+        <div class="gallery-item" role="listitem">
+          <div class="gallery-img-wrap">
+            <img src="images/jardin-carpa-blanca.jpg"
+                 alt="Jardín de Estancia San Miguel al atardecer con carpa blanca, sillas de tiffany blancas y luces para evento especial"
+                 loading="lazy" class="gallery-img" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
+                      data-src="images/jardin-carpa-blanca.jpg"
+                      data-alt="Jardín carpa blanca">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILA 3: Bar (tall) + Jardín graduación (wide) -->
+        <div class="gallery-item gallery-tall" role="listitem">
+          <div class="gallery-img-wrap">
+            <img src="images/bar.jpg"
+                 alt="Bar clásico de madera oscura con bartenders profesionales preparando cócteles en Estancia San Miguel"
+                 loading="lazy" class="gallery-img" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
+                      data-src="images/bar.jpg"
+                      data-alt="Bar clásico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-large" role="listitem">
+          <div class="gallery-img-wrap">
+            <img src="images/jardin-graduacion.jpg"
+                 alt="Jardín de Estancia San Miguel decorado para graduación con carpa blanca, sillas negras y mesas con flores blancas"
+                 loading="lazy" class="gallery-img" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
+                      data-src="images/jardin-graduacion.jpg"
+                      data-alt="Jardín graduación">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILA 4: Jardín exterior -->
+        <div class="gallery-item gallery-wide-full" role="listitem">
+          <div class="gallery-img-wrap">
+            <img src="images/jardin-exterior.jpg"
+                 alt="Vista completa del jardín exterior de Estancia San Miguel montado para evento de graduación con carpa, decoración y buffet"
+                 loading="lazy" class="gallery-img" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
+                      data-src="images/jardin-exterior.jpg"
+                      data-alt="Jardín exterior completo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar imagen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE / STATS ===== -->
+  <section class="experience section-padding bg-olive" id="experiencia" aria-labelledby="experience-title">
+    <div class="experience-parallax-bg" id="exp-parallax-bg"
+         style="background-image: url('images/jardin-noche-elegante.jpg');"></div>
+    <div class="experience-overlay"></div>
+    <div class="container experience-content">
+      <div class="section-tag light center-tag">Nuestra Experiencia</div>
+      <h2 class="experience-title" id="experience-title">
+        Tú imagina el momento,<br /><em>nosotros lo hacemos especial.</em>
+      </h2>
+      <div class="gold-divider center"></div>
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-item" id="stat-1">
+          <div class="stat-number">+<span class="count-num" data-target="35">0</span></div>
+          <div class="stat-label">Eventos Realizados</div>
+        </div>
+        <div class="stat-item" id="stat-2">
+          <div class="stat-number">+<span class="count-num" data-target="100">0</span></div>
+          <div class="stat-label">Clientes Satisfechos</div>
+        </div>
+        <div class="stat-item" id="stat-3">
+          <div class="stat-number"><span class="count-num" data-target="1">0</span> Año</div>
+          <div class="stat-label">de Experiencia</div>
+        </div>
+        <div class="stat-item" id="stat-4">
+          <div class="stat-number"><span class="count-num" data-target="100">0</span>%</div>
+          <div class="stat-label">Atención Personalizada</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials section-padding" id="testimonios" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Testimonios</div>
+        <h2 class="section-title" id="testimonials-title">Lo que Dicen<br />Nuestros <em>Clientes</em></h2>
+        <div class="gold-divider center"></div>
+      </div>
+      <div class="testimonials-carousel-wrapper" aria-live="polite">
+        <div class="testimonials-track" id="testimonials-track">
+
+          <article class="testimonial-card" aria-label="Testimonio de María González">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "Estancia San Miguel superó todas nuestras expectativas. El lugar es simplemente hermoso
+              y el equipo se preocupó por cada detalle. ¡Mi cumpleaños de 50 fue perfecto!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar-initials" aria-hidden="true">MG</div>
+              <div class="testimonial-info">
+                <strong>María González</strong>
+                <span>Celebración de Cumpleaños</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" aria-label="Testimonio de Roberto Andrade">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "Organizamos nuestra reunión corporativa aquí y fue todo un éxito. El ambiente,
+              el catering, la atención… todo fue de primer nivel. ¡Definitivamente volveremos!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar-initials" aria-hidden="true">RA</div>
+              <div class="testimonial-info">
+                <strong>Roberto Andrade</strong>
+                <span>Evento Corporativo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" aria-label="Testimonio de Carmen Vásquez">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "El bautizo de mi hijo fue mágico. Los jardines son preciosos y el personal fue
+              increíblemente atento. Gracias Estancia San Miguel por hacer de ese día algo inolvidable."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar-initials" aria-hidden="true">CV</div>
+              <div class="testimonial-info">
+                <strong>Carmen Vásquez</strong>
+                <span>Bautizo Familiar</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" aria-label="Testimonio de Andrés Morales">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "Celebramos la graduación de nuestra hija aquí y fue un sueño hecho realidad.
+              La decoración, la comida, el servicio… absolutamente todo fue perfecto."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar-initials" aria-hidden="true">AM</div>
+              <div class="testimonial-info">
+                <strong>Andrés Morales</strong>
+                <span>Graduación</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <div class="carousel-controls" aria-label="Controles del carrusel">
+          <button class="carousel-btn" id="carousel-prev" aria-label="Testimonio anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Indicadores"></div>
+          <button class="carousel-btn" id="carousel-next" aria-label="Siguiente testimonio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta" id="contacto" aria-labelledby="cta-title">
+    <div class="cta-parallax-bg" id="cta-parallax-bg"
+         style="background-image: url('images/jardin-noche-elegante.jpg');"></div>
+    <div class="cta-overlay"></div>
+    <div class="container cta-content">
+      <div class="cta-badge" aria-hidden="true">✦ Estancia San Miguel ✦</div>
+      <h2 class="cta-title" id="cta-title">
+        Estamos listos para hacer de<br />tu evento algo <em>inolvidable</em>
+      </h2>
+      <p class="cta-subtitle">Contáctanos hoy y diseñemos juntos el evento de tus sueños</p>
+      <div class="gold-divider center light-div"></div>
+      <a href="https://wa.me/593990712984?text=Hola%20deseo%20informaci%C3%B3n%20para%20un%20evento%20en%20Estancia%20San%20Miguel"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-gold btn-large" id="cta-main-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Solicitar Cotización</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="Logo Estancia San Miguel" class="footer-logo" loading="lazy" />
+          <p class="footer-tagline">Naturaleza, Calidez<br />y Momentos Inolvidables</p>
+          <div class="footer-social">
+            <a href="https://wa.me/593990712984" target="_blank" rel="noopener noreferrer"
+               class="social-link" id="footer-whatsapp" aria-label="WhatsApp Estancia San Miguel">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Navegación</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#nosotros" class="footer-link">Nosotros</a></li>
+            <li><a href="#eventos" class="footer-link">Tipos de Eventos</a></li>
+            <li><a href="#beneficios" class="footer-link">Beneficios</a></li>
+            <li><a href="#galeria" class="footer-link">Galería</a></li>
+            <li><a href="#testimonios" class="footer-link">Testimonios</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h3 class="footer-col-title">Eventos</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#eventos" class="footer-link">Reuniones Familiares</a></li>
+            <li><a href="#eventos" class="footer-link">Cumpleaños</a></li>
+            <li><a href="#eventos" class="footer-link">Bautizos</a></li>
+            <li><a href="#eventos" class="footer-link">Graduaciones</a></li>
+            <li><a href="#eventos" class="footer-link">Eventos Corporativos</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3 class="footer-col-title">Contáctanos</h3>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Teléfono</span>
+                <a href="tel:+593990712984" class="contact-value">+593 99 071 2984</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">WhatsApp</span>
+                <a href="https://wa.me/593990712984" target="_blank" rel="noopener noreferrer" class="contact-value">+593 99 071 2984</a>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/593990712984?text=Hola%2C%20deseo%20informaci%C3%B3n%20para%20reservar%20un%20evento%20en%20Estancia%20San%20Miguel."
+             target="_blank" rel="noopener noreferrer"
+             class="btn-footer-cta" id="footer-cta-btn">
+            Contacto Rápido
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">© 2025 Estancia San Miguel. Todos los derechos reservados.</p>
+        <p class="footer-copy-right">Diseñado con <span aria-label="amor">♥</span> en Ecuador</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/593990712984?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20eventos%20en%20Estancia%20San%20Miguel."
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float" id="whatsapp-float"
+     aria-label="Contactar por WhatsApp">
+    <div class="whatsapp-pulse" aria-hidden="true"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-tooltip">¡Escríbenos!</span>
+  </a>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scroll-top" aria-label="Volver al inicio">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
