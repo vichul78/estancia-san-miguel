@@ -290,39 +290,80 @@
   </section>
 
   <!-- ===== GALLERY ===== -->
-<section class="gallery section-padding bg-light" id="galeria" aria-labelledby="gallery-title">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+  .galeria-premium { padding: 60px 0; background-color: #faf9f6; overflow: hidden; }
+  .mySwiperGaleria { width: 100%; max-width: 1200px; margin: 0 auto; padding-bottom: 60px; }
+  .swiper-slide { display: flex; justify-content: center; }
+  
+  .carousel-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover; /* Recorte perfecto sin estirar */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  
+  /* Botones dorados elegantes */
+  .swiper-button-next, .swiper-button-prev { color: #d4af37 !important; }
+  .swiper-pagination-bullet-active { background-color: #d4af37 !important; }
+</style>
+
+<section class="galeria-premium" id="galeria">
   <div class="container">
     
-    <div class="section-header text-center">
-      <div class="section-tag">Galería</div>
-      <h2 class="section-title" id="gallery-title">Momentos que <br /><em>Hablan por Sí Solos</em></h2>
-      <div class="gold-divider center"></div>
-      <p class="section-desc">Cada fotografía es una historia de alegría, amor y celebración</p>
+    <div class="section-header text-center" style="margin-bottom: 40px;">
+      <div style="color: #d4af37; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Galería</div>
+      <h2 style="font-size: 2.5rem; margin-top: 10px; font-family: serif; color: #222;">Momentos que <br /><em>Hablan por Sí Solos</em></h2>
+      <p style="margin-top: 15px; color: #666;">Cada fotografía es una historia de alegría, amor y celebración</p>
     </div>
 
     <div class="swiper mySwiperGaleria">
       <div class="swiper-wrapper">
         
         <div class="swiper-slide">
-          <img src="images/jardin-noche-elegante.jpg" alt="Jardín de noche elegante" class="carousel-img" />
+          <img src="images/jardin-noche-elegante.jpg" alt="Instalaciones elegantes de noche" class="carousel-img" />
         </div>
 
         <div class="swiper-slide">
-          <img src="images/jardin-exterior.jpg" alt="Jardín exterior completo" class="carousel-img" />
+          <img src="images/jardin-exterior.jpg" alt="Jardín exterior de la estancia" class="carousel-img" />
         </div>
 
         <div class="swiper-slide">
-          <img src="images/jardin-exterior.jpg" alt="Estancia San Miguel" class="carousel-img" />
+          <img src="images/tu-foto-3.jpg" alt="Detalle arquitectónico" class="carousel-img" />
         </div>
 
       </div>
       
+      <div class="swiper-pagination"></div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
     </div>
     
   </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // Aseguramos que el código se ejecute cuando cargue este pedazo
+  document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper(".mySwiperGaleria", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: { 
+        delay: 3500, /* 3.5 segundos por foto */
+        disableOnInteraction: false 
+      },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 } /* En PC se ven 3 alineadas */
+      }
+    });
+  });
+</script>
 </section>
 
   <!-- ===== TESTIMONIALS ===== -->
