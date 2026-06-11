@@ -290,109 +290,40 @@
   </section>
 
   <!-- ===== GALLERY ===== -->
-  <section class="gallery section-padding bg-light" id="galeria" aria-labelledby="gallery-title">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Galería</div>
-        <h2 class="section-title" id="gallery-title">Momentos que<br /><em>Hablan por Sí Solos</em></h2>
-        <div class="gold-divider center"></div>
-        <p class="section-desc">Cada fotografía es una historia de alegría, amor y celebración</p>
-      </div>
-
-     <div class="swiper mySwiperGaleria">
-          <div class="swiper-wrapper">
-            
-            <div class="swiper-slide">
-              <img src="images/jardin-noche-elegante.jpg" alt="Jardín de noche" class="carousel-img" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="images/jardin-exterior.jpg" alt="Jardín exterior" class="carousel-img" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="images/tu-tercera-foto.jpg" alt="Estancia San Miguel" class="carousel-img" />
-            </div>
-
-          </div>
-          
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-        ```
-
-> **Consejo de diseño:** Para mantener un estilo arquitectónico limpio y elegante, asegúrate de que las fotos que pongas en el `src` sean de las instalaciones, sin personas cruzando, para que el diseño se vea mucho más premium.
-
----
-
-### Paso 2: Pegar los Estilos (CSS)
-
-Ahora necesitamos que esas fotos tomen la forma correcta.
-
-1. Sube hasta el principio de tu archivo.
-2. Busca la etiqueta **`</head>`** (suele estar entre las líneas 20 y 40).
-3. Haz un espacio justo **arriba** de `</head>` y pega esto:
-
-```html
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    .mySwiperGaleria { width: 100%; padding-bottom: 50px; }
-    .carousel-img {
-      width: 100%;
-      height: 450px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    .swiper-button-next, .swiper-button-prev { color: #d4af37; }
-    .swiper-pagination-bullet-active { background-color: #d4af37; }
-  </style>
-      </div>
-    </div>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" aria-hidden="true">
-      <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar imagen">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="lightbox-content">
-        <img src="" alt="" id="lightbox-img" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EXPERIENCE / STATS ===== -->
-  <section class="experience section-padding bg-olive" id="experiencia" aria-labelledby="experience-title">
-    <div class="experience-parallax-bg" id="exp-parallax-bg"
-         style="background-image: url('images/jardin-noche-elegante.jpg');"></div>
-    <div class="experience-overlay"></div>
-    <div class="container experience-content">
-      <div class="section-tag light center-tag">Nuestra Experiencia</div>
-      <h2 class="experience-title" id="experience-title">
-        Tú imagina el momento,<br /><em>nosotros lo hacemos especial.</em>
-      </h2>
+<section class="gallery section-padding bg-light" id="galeria" aria-labelledby="gallery-title">
+  <div class="container">
+    
+    <div class="section-header text-center">
+      <div class="section-tag">Galería</div>
+      <h2 class="section-title" id="gallery-title">Momentos que <br /><em>Hablan por Sí Solos</em></h2>
       <div class="gold-divider center"></div>
-      <div class="stats-grid" id="stats-grid">
-        <div class="stat-item" id="stat-1">
-          <div class="stat-number">+<span class="count-num" data-target="35">0</span></div>
-          <div class="stat-label">Eventos Realizados</div>
-        </div>
-        <div class="stat-item" id="stat-2">
-          <div class="stat-number">+<span class="count-num" data-target="100">0</span></div>
-          <div class="stat-label">Clientes Satisfechos</div>
-        </div>
-        <div class="stat-item" id="stat-3">
-          <div class="stat-number"><span class="count-num" data-target="1">0</span> Año</div>
-          <div class="stat-label">de Experiencia</div>
-        </div>
-        <div class="stat-item" id="stat-4">
-          <div class="stat-number"><span class="count-num" data-target="100">0</span>%</div>
-          <div class="stat-label">Atención Personalizada</div>
-        </div>
-      </div>
+      <p class="section-desc">Cada fotografía es una historia de alegría, amor y celebración</p>
     </div>
-  </section>
+
+    <div class="swiper mySwiperGaleria">
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+          <img src="images/jardin-noche-elegante.jpg" alt="Jardín de noche elegante" class="carousel-img" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/jardin-exterior.jpg" alt="Jardín exterior completo" class="carousel-img" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/jardin-exterior.jpg" alt="Estancia San Miguel" class="carousel-img" />
+        </div>
+
+      </div>
+      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    
+  </div>
+</section>
 
   <!-- ===== TESTIMONIALS ===== -->
   <section class="testimonials section-padding" id="testimonios" aria-labelledby="testimonials-title">
