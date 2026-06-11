@@ -299,118 +299,55 @@
         <p class="section-desc">Cada fotografía es una historia de alegría, amor y celebración</p>
       </div>
 
-      <div class="gallery-masonry" id="gallery-grid" role="list">
-
-        <!-- FILA 1: Jardín noche elegante (grande) + Cena íntima (alta) -->
-        <div class="gallery-item gallery-large" role="listitem">
-          <div class="gallery-img-wrap">
-            <img src="images/jardin-noche-elegante.jpg"
-                 alt="Jardín de Estancia San Miguel decorado con carpa blanca, cortinas y luces de hada para una recepción nocturna elegante"
-                 loading="eager" class="gallery-img" />
-            <div class="gallery-overlay">
-              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
-                      data-src="images/jardin-noche-elegante.jpg"
-                      data-alt="Jardín nocturno elegante">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
-              </button>
+     <div class="swiper mySwiperGaleria">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <img src="images/jardin-noche-elegante.jpg" alt="Jardín de noche" class="carousel-img" />
             </div>
-          </div>
-        </div>
 
-        <div class="gallery-item gallery-tall" role="listitem">
-          <div class="gallery-img-wrap">
-            <img src="images/evento-noche.jpg"
-                 alt="Cena íntima en el salón rústico de Estancia San Miguel con letrero iluminado, chimenea de ladrillo y ambiente cálido"
-                 loading="eager" class="gallery-img" />
-            <div class="gallery-overlay">
-              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
-                      data-src="images/evento-noche.jpg"
-                      data-alt="Cena íntima rústica">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
-              </button>
+            <div class="swiper-slide">
+              <img src="images/jardin-exterior.jpg" alt="Jardín exterior" class="carousel-img" />
             </div>
-          </div>
-        </div>
 
-        <!-- FILA 2: Salón recepción (wide) -->
-        <div class="gallery-item gallery-wide" role="listitem">
-          <div class="gallery-img-wrap">
-            <img src="images/evento-salon.jpg"
-                 alt="Gran salón de Estancia San Miguel con invitados en recepción, vigas de madera, ventanales y música en vivo"
-                 loading="lazy" class="gallery-img" />
-            <div class="gallery-overlay">
-              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
-                      data-src="images/evento-salon.jpg"
-                      data-alt="Gran salón recepción">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
-              </button>
+            <div class="swiper-slide">
+              <img src="images/tu-tercera-foto.jpg" alt="Estancia San Miguel" class="carousel-img" />
             </div>
-          </div>
-        </div>
 
-        <!-- FILA 2 col 3: Jardín carpa blanca -->
-        <div class="gallery-item" role="listitem">
-          <div class="gallery-img-wrap">
-            <img src="images/jardin-carpa-blanca.jpg"
-                 alt="Jardín de Estancia San Miguel al atardecer con carpa blanca, sillas de tiffany blancas y luces para evento especial"
-                 loading="lazy" class="gallery-img" />
-            <div class="gallery-overlay">
-              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
-                      data-src="images/jardin-carpa-blanca.jpg"
-                      data-alt="Jardín carpa blanca">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
-              </button>
-            </div>
           </div>
+          
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
+        ```
 
-        <!-- FILA 3: Bar (tall) + Jardín graduación (wide) -->
-        <div class="gallery-item gallery-tall" role="listitem">
-          <div class="gallery-img-wrap">
-            <img src="images/bar.jpg"
-                 alt="Bar clásico de madera oscura con bartenders profesionales preparando cócteles en Estancia San Miguel"
-                 loading="lazy" class="gallery-img" />
-            <div class="gallery-overlay">
-              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
-                      data-src="images/bar.jpg"
-                      data-alt="Bar clásico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
+> **Consejo de diseño:** Para mantener un estilo arquitectónico limpio y elegante, asegúrate de que las fotos que pongas en el `src` sean de las instalaciones, sin personas cruzando, para que el diseño se vea mucho más premium.
 
-        <div class="gallery-item gallery-large" role="listitem">
-          <div class="gallery-img-wrap">
-            <img src="images/jardin-graduacion.jpg"
-                 alt="Jardín de Estancia San Miguel decorado para graduación con carpa blanca, sillas negras y mesas con flores blancas"
-                 loading="lazy" class="gallery-img" />
-            <div class="gallery-overlay">
-              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
-                      data-src="images/jardin-graduacion.jpg"
-                      data-alt="Jardín graduación">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
+---
 
-        <!-- FILA 4: Jardín exterior -->
-        <div class="gallery-item gallery-wide-full" role="listitem">
-          <div class="gallery-img-wrap">
-            <img src="images/jardin-exterior.jpg"
-                 alt="Vista completa del jardín exterior de Estancia San Miguel montado para evento de graduación con carpa, decoración y buffet"
-                 loading="lazy" class="gallery-img" />
-            <div class="gallery-overlay">
-              <button class="gallery-zoom-btn" aria-label="Ver imagen completa"
-                      data-src="images/jardin-exterior.jpg"
-                      data-alt="Jardín exterior completo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
+### Paso 2: Pegar los Estilos (CSS)
 
+Ahora necesitamos que esas fotos tomen la forma correcta.
+
+1. Sube hasta el principio de tu archivo.
+2. Busca la etiqueta **`</head>`** (suele estar entre las líneas 20 y 40).
+3. Haz un espacio justo **arriba** de `</head>` y pega esto:
+
+```html
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    .mySwiperGaleria { width: 100%; padding-bottom: 50px; }
+    .carousel-img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .swiper-button-next, .swiper-button-prev { color: #d4af37; }
+    .swiper-pagination-bullet-active { background-color: #d4af37; }
+  </style>
       </div>
     </div>
 
@@ -653,5 +590,20 @@
   </button>
 
   <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiperGaleria", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
 </body>
 </html>
