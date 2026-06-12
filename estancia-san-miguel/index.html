@@ -290,87 +290,138 @@
   </section>
 
   <!-- ===== GALLERY ===== -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <style>
-  .galeria-premium { padding: 60px 0; background-color: #faf9f6; overflow: hidden; }
-  .mySwiperGaleria { width: 100%; max-width: 1200px; margin: 0 auto; padding-bottom: 60px; }
-  .swiper-slide { display: flex; justify-content: center; }
-  
-  .carousel-img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover; 
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  /* Fondo general y espaciado */
+  .galeria-cinematica {
+    padding: 80px 0;
+    background-color: #faf9f6; /* Tono cálido elegante */
   }
+
+  /* Contenedor principal de las franjas */
+  .expanding-gallery {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    gap: 15px; /* Espacio entre las tarjetas */
+    padding: 0 20px;
+  }
+
+  /* Cada franja individual */
+  .expand-item {
+    flex: 1; /* Todas empiezan del mismo tamaño */
+    position: relative;
+    border-radius: 20px; /* Bordes suaves */
+    overflow: hidden;
+    cursor: pointer;
+    /* La magia de la animación está aquí */
+    transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  /* La imagen dentro de la franja */
+  .expand-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6) grayscale(20%); /* Ligeramente oscuras de base */
+    transition: all 0.6s ease;
+  }
+
+  /* La caja de texto translúcida (Glassmorphism) */
+  .expand-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(25, 25, 25, 0.6);
+    backdrop-filter: blur(8px); /* Efecto vidrio esmerilado */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    opacity: 0; /* Oculto por defecto */
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+
+  .expand-content h3 {
+    color: #d4af37; /* Dorado */
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === LO QUE PASA CUANDO PASAS EL RATÓN (HOVER) === */
   
-  .swiper-button-next, .swiper-button-prev { color: #d4af37 !important; }
-  .swiper-pagination-bullet-active { background-color: #d4af37 !important; }
-</style>
+  /* La tarjeta se expande a ser 4 veces más grande que las demás */
+  .expand-item:hover {
+    flex: 4;
+  }
 
-<section class="galeria-premium" id="galeria">
-  <div class="container">
-    
-    <div class="section-header text-center" style="margin-bottom: 40px;">
-      <div style="color: #d4af37; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Galería</div>
-      <h2 style="font-size: 2.5rem; margin-top: 10px; font-family: serif; color: #222;">Momentos que <br /><em>Hablan por Sí Solos</em></h2>
-      <p style="margin-top: 15px; color: #666;">Cada fotografía es una historia de alegría, amor y celebración</p>
-    </div>
+  /* La imagen recupera su color y brillo al 100% */
+  .expand-item:hover img {
+    filter: brightness(1) grayscale(0%);
+  }
 
-    <div class="swiper mySwiperGaleria">
-      <div class="swiper-wrapper">
-        
-        <div class="swiper-slide">
-          <img src="images/jardin-noche-elegante.jpg" alt="Instalaciones elegantes" class="carousel-img" />
-        </div>
+  /* El texto aparece deslizándose hacia arriba */
+  .expand-item:hover .expand-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-        <div class="swiper-slide">
-          <img src="images/jardin-exterior.jpg" alt="Jardín exterior" class="carousel-img" />
-        </div>
-
-        <div class="swiper-slide">
-          <img src="images/tu-foto-3.jpg" alt="Detalle arquitectónico" class="carousel-img" />
-        </div>
-
-      </div>
-      
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-    
-  </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  function arrancarSwiper() {
-    // Verifica si la librería ya se descargó correctamente
-    if (typeof Swiper !== 'undefined') {
-      new Swiper(".mySwiperGaleria", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: { 
-          delay: 3000, 
-          disableOnInteraction: false 
-        },
-        pagination: { el: ".swiper-pagination", clickable: true },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        breakpoints: {
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 }
-        }
-      });
-    } else {
-      // Si la librería falló o está lenta, espera 0.5 segundos y vuelve a intentar sola
-      setTimeout(arrancarSwiper, 500);
+  /* Adaptación para celulares (se apilan hacia abajo en lugar de los lados) */
+  @media (max-width: 768px) {
+    .expanding-gallery {
+      flex-direction: column;
+      height: 800px;
     }
   }
-  
-  // Ejecutamos la función de arranque
-  arrancarSwiper();
-</script>
+</style>
+
+<section class="galeria-cinematica" id="galeria">
+  <div class="container">
+    
+    <div class="section-header text-center" style="margin-bottom: 50px;">
+      <div style="color: #d4af37; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Experiencia Visual</div>
+      <h2 style="font-size: 2.5rem; margin-top: 10px; font-family: serif; color: #222;">Espacios de <br /><em>Alta Gama</em></h2>
+    </div>
+
+    <div class="expanding-gallery">
+      
+      <div class="expand-item">
+        <img src="images/jardin-noche-elegante.jpg" alt="Iluminación nocturna" />
+        <div class="expand-content">
+          <h3>Jardines Nocturnos</h3>
+        </div>
+      </div>
+
+      <div class="expand-item">
+        <img src="images/jardin-exterior.jpg" alt="Arquitectura y naturaleza" />
+        <div class="expand-content">
+          <h3>Exteriores</h3>
+        </div>
+      </div>
+
+      <div class="expand-item">
+        <img src="images/jardin-noche-elegante.jpg" alt="Detalle interior" />
+        <div class="expand-content">
+          <h3>Salones Interiores</h3>
+        </div>
+      </div>
+
+      <div class="expand-item">
+        <img src="images/jardin-exterior.jpg" alt="Áreas verdes" />
+        <div class="expand-content">
+          <h3>Entorno Natural</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
   <!-- ===== TESTIMONIALS ===== -->
