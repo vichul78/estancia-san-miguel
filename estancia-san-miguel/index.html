@@ -291,95 +291,23 @@
 
   <!-- ===== GALLERY ===== -->
 <style>
-  /* Fondo general y espaciado */
-  .galeria-cinematica {
-    padding: 80px 0;
-    background-color: #faf9f6; /* Tono cálido elegante */
-  }
-
-  /* Contenedor principal de las franjas */
-  .expanding-gallery {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    height: 500px;
-    margin: 0 auto;
-    gap: 15px; /* Espacio entre las tarjetas */
-    padding: 0 20px;
-  }
-
-  /* Cada franja individual */
-  .expand-item {
-    flex: 1; /* Todas empiezan del mismo tamaño */
-    position: relative;
-    border-radius: 20px; /* Bordes suaves */
-    overflow: hidden;
-    cursor: pointer;
-    /* La magia de la animación está aquí */
-    transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
-
-  /* La imagen dentro de la franja */
-  .expand-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6) grayscale(20%); /* Ligeramente oscuras de base */
-    transition: all 0.6s ease;
-  }
-
-  /* La caja de texto translúcida (Glassmorphism) */
-  .expand-content {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background: rgba(25, 25, 25, 0.6);
-    backdrop-filter: blur(8px); /* Efecto vidrio esmerilado */
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    opacity: 0; /* Oculto por defecto */
-    transform: translateY(20px);
-    transition: all 0.5s ease;
-  }
-
-  .expand-content h3 {
-    color: #d4af37; /* Dorado */
-    margin: 0 0 5px 0;
-    font-size: 1.2rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  /* === LO QUE PASA CUANDO PASAS EL RATÓN (HOVER) === */
+  .galeria-cinematica { padding: 80px 0; background-color: #faf9f6; overflow: hidden; }
+  .expanding-gallery { display: flex; width: 100%; max-width: 1200px; height: 500px; margin: 0 auto; gap: 15px; padding: 0 20px; }
+  .expand-item { flex: 1; position: relative; border-radius: 20px; overflow: hidden; cursor: pointer; transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+  .expand-item img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) grayscale(20%); transition: all 0.6s ease; }
   
-  /* La tarjeta se expande a ser 4 veces más grande que las demás */
-  .expand-item:hover {
-    flex: 4;
+  .expand-content { 
+    position: absolute; bottom: 20px; left: 20px; right: 20px; 
+    background: rgba(25, 25, 25, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 12px; opacity: 0; transform: translateY(20px); transition: all 0.5s ease; 
   }
+  .expand-content h3 { color: #d4af37; margin: 0 0 5px 0; font-size: 1.2rem; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; }
 
-  /* La imagen recupera su color y brillo al 100% */
-  .expand-item:hover img {
-    filter: brightness(1) grayscale(0%);
-  }
+  .expand-item:hover { flex: 4; }
+  .expand-item:hover img { filter: brightness(1) grayscale(0%); }
+  .expand-item:hover .expand-content { opacity: 1; transform: translateY(0); }
 
-  /* El texto aparece deslizándose hacia arriba */
-  .expand-item:hover .expand-content {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Adaptación para celulares (se apilan hacia abajo en lugar de los lados) */
-  @media (max-width: 768px) {
-    .expanding-gallery {
-      flex-direction: column;
-      height: 800px;
-    }
-  }
+  @media (max-width: 768px) { .expanding-gallery { flex-direction: column; height: 800px; } }
 </style>
 
 <section class="galeria-cinematica" id="galeria">
@@ -393,30 +321,30 @@
     <div class="expanding-gallery">
       
       <div class="expand-item">
-        <img src="images/jardin-noche-elegante.jpg" alt="Iluminación nocturna" />
+        <img src="images/jardin-noche-elegante.jpg" alt="Iluminación nocturna elegante" />
         <div class="expand-content">
-          <h3>Jardines Nocturnos</h3>
+          <h3>Jardín Nocturno</h3>
         </div>
       </div>
 
       <div class="expand-item">
-        <img src="images/jardin-exterior.jpg" alt="Arquitectura y naturaleza" />
+        <img src="images/jardin-exterior.jpg" alt="Arquitectura y naturaleza exterior" />
         <div class="expand-content">
           <h3>Exteriores</h3>
         </div>
       </div>
 
       <div class="expand-item">
-        <img src="images/jardin-noche-elegante.jpg" alt="Detalle interior" />
+        <img src="images/evento-salon.jpg" alt="Interior del salón de eventos" />
         <div class="expand-content">
-          <h3>Salones Interiores</h3>
+          <h3>Salón Principal</h3>
         </div>
       </div>
 
       <div class="expand-item">
-        <img src="images/jardin-exterior.jpg" alt="Áreas verdes" />
+        <img src="images/jardin-carpa-blanca.jpg" alt="Montaje con carpa blanca" />
         <div class="expand-content">
-          <h3>Entorno Natural</h3>
+          <h3>Eventos Especiales</h3>
         </div>
       </div>
 
